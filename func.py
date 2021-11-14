@@ -279,8 +279,8 @@ def screen_capture(driver, path):
 
 def wechat_notification(userName, sckey):
     with request.urlopen(
-            quote('https://sctapi.ftqq.com/' + sckey + '.send?title=自由玩耍&desp=学号' +
-                  str(userName) + 'Freedoooom',
+            quote('https://sctapi.ftqq.com/' + sckey + '.send?title=成功报备&desp=学号' +
+                  str(userName) + '成功报备',
                   safe='/:?=&')) as response:
         response = json.loads(response.read().decode('utf-8'))
     # if response['error'] == 'SUCCESS':
